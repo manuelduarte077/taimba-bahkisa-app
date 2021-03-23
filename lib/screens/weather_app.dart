@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:flutter_weather_app/models/weather_locations.dart';
 import 'package:flutter_weather_app/widgets/single_weather.dart';
 
 class WeatherApp extends StatelessWidget {
@@ -90,7 +91,11 @@ class WeatherApp extends StatelessWidget {
                 ],
               ),
             ),
-            SingleWeather(),
+            PageView.builder(
+              scrollDirection: Axis.horizontal,
+              itemCount: locationList.length,
+              itemBuilder: (ctx, i) => SingleWeather(i),
+            ),
           ],
         ),
       ),
