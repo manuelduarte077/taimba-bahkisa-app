@@ -39,7 +39,7 @@ class WeatherApp extends StatelessWidget {
         child: Stack(
           children: [
             Image.asset(
-              'assets/night.jpg',
+              'assets/rainy.jpg',
               fit: BoxFit.cover,
               height: double.infinity,
               width: double.infinity,
@@ -61,7 +61,7 @@ class WeatherApp extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             SizedBox(
-                              height: 100,
+                              height: 150,
                             ),
                             Text(
                               'Managua',
@@ -70,10 +70,14 @@ class WeatherApp extends StatelessWidget {
                                   fontWeight: FontWeight.bold,
                                   color: Colors.white),
                             ),
+                            SizedBox(
+                              height: 5,
+                            ),
                             Text(
-                              'Hello',
+                              '04:00 PM - Tuesday, March 23, 2021',
                               style: GoogleFonts.lato(
-                                fontSize: 22,
+                                fontSize: 14,
+                                fontWeight: FontWeight.bold,
                                 color: Colors.white,
                               ),
                             ),
@@ -86,18 +90,33 @@ class WeatherApp extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        'Managua',
+                        '35\u2103',
                         style: GoogleFonts.lato(
-                            fontSize: 35,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white),
-                      ),
-                      Text(
-                        'Hello',
-                        style: GoogleFonts.lato(
-                          fontSize: 22,
+                          fontSize: 85,
+                          fontWeight: FontWeight.w300,
                           color: Colors.white,
                         ),
+                      ),
+                      Row(
+                        children: [
+                          SvgPicture.asset(
+                            'assets/moon.svg',
+                            width: 34,
+                            height: 34,
+                            color: Colors.white,
+                          ),
+                          SizedBox(
+                            width: 10,
+                          ),
+                          Text(
+                            'Night',
+                            style: GoogleFonts.lato(
+                              fontSize: 25,
+                              fontWeight: FontWeight.w500,
+                              color: Colors.white,
+                            ),
+                          ),
+                        ],
                       ),
                     ],
                   ),
@@ -106,25 +125,135 @@ class WeatherApp extends StatelessWidget {
                       Container(
                         margin: EdgeInsets.symmetric(vertical: 40),
                         decoration: BoxDecoration(
-                            border: Border.all(color: Colors.white30)),
+                          border: Border.all(
+                            color: Colors.white30,
+                          ),
+                        ),
                       ),
-                      Row(
-                        children: [
-                          Text(
-                            'Managua',
-                            style: GoogleFonts.lato(
-                                fontSize: 35,
-                                fontWeight: FontWeight.bold,
-                                color: Colors.white),
-                          ),
-                          Text(
-                            'Hello',
-                            style: GoogleFonts.lato(
-                              fontSize: 22,
-                              color: Colors.white,
+                      Padding(
+                        padding: const EdgeInsets.fromLTRB(0, 0, 0, 20),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Column(
+                              children: [
+                                Text(
+                                  'Wind',
+                                  style: GoogleFonts.lato(
+                                      fontSize: 14,
+                                      fontWeight: FontWeight.bold,
+                                      color: Colors.white),
+                                ),
+                                Text(
+                                  '10',
+                                  style: GoogleFonts.lato(
+                                    fontSize: 24,
+                                    color: Colors.white,
+                                  ),
+                                ),
+                                Text(
+                                  'km/h',
+                                  style: GoogleFonts.lato(
+                                    fontSize: 14,
+                                    color: Colors.white,
+                                  ),
+                                ),
+                                Stack(
+                                  children: [
+                                    Container(
+                                      height: 5,
+                                      width: 50,
+                                      color: Colors.white38,
+                                    ),
+                                    Container(
+                                      height: 5,
+                                      width: 5,
+                                      color: Colors.greenAccent,
+                                    )
+                                  ],
+                                )
+                              ],
                             ),
-                          ),
-                        ],
+                            Column(
+                              children: [
+                                Text(
+                                  'Rain',
+                                  style: GoogleFonts.lato(
+                                      fontSize: 14,
+                                      fontWeight: FontWeight.bold,
+                                      color: Colors.white),
+                                ),
+                                Text(
+                                  '2',
+                                  style: GoogleFonts.lato(
+                                    fontSize: 24,
+                                    color: Colors.white,
+                                  ),
+                                ),
+                                Text(
+                                  '%',
+                                  style: GoogleFonts.lato(
+                                    fontSize: 14,
+                                    color: Colors.white,
+                                  ),
+                                ),
+                                Stack(
+                                  children: [
+                                    Container(
+                                      height: 5,
+                                      width: 50,
+                                      color: Colors.white38,
+                                    ),
+                                    Container(
+                                      height: 5,
+                                      width: 4,
+                                      color: Colors.deepPurpleAccent,
+                                    )
+                                  ],
+                                )
+                              ],
+                            ),
+                            Column(
+                              children: [
+                                Text(
+                                  'Wind',
+                                  style: GoogleFonts.lato(
+                                      fontSize: 14,
+                                      fontWeight: FontWeight.bold,
+                                      color: Colors.white),
+                                ),
+                                Text(
+                                  '10',
+                                  style: GoogleFonts.lato(
+                                    fontSize: 24,
+                                    color: Colors.white,
+                                  ),
+                                ),
+                                Text(
+                                  '%',
+                                  style: GoogleFonts.lato(
+                                    fontSize: 14,
+                                    color: Colors.white,
+                                  ),
+                                ),
+                                Stack(
+                                  children: [
+                                    Container(
+                                      height: 5,
+                                      width: 50,
+                                      color: Colors.white38,
+                                    ),
+                                    Container(
+                                      height: 5,
+                                      width: 5,
+                                      color: Colors.redAccent,
+                                    )
+                                  ],
+                                )
+                              ],
+                            ),
+                          ],
+                        ),
                       )
                     ],
                   )
