@@ -22,6 +22,16 @@ class _WeatherAppState extends State<WeatherApp> {
 
   @override
   Widget build(BuildContext context) {
+    if (locationList[_currentPage].weatherType == 'Sunny') {
+      bgImg = 'assets/sunny.jpg';
+    } else if (locationList[_currentPage].weatherType == 'Night') {
+      bgImg = 'assets/night.jpg';
+    } else if (locationList[_currentPage].weatherType == 'Rain') {
+      bgImg = 'assets/rainy.jpg';
+    } else if (locationList[_currentPage].weatherType == 'cloudy') {
+      bgImg = 'assets/cloudy.jpeg';
+    }
+
     return Scaffold(
       extendBodyBehindAppBar: true,
       appBar: AppBar(
@@ -55,7 +65,7 @@ class _WeatherAppState extends State<WeatherApp> {
         child: Stack(
           children: [
             Image.asset(
-              'assets/night.jpg',
+              bgImg,
               fit: BoxFit.cover,
               height: double.infinity,
               width: double.infinity,
@@ -68,10 +78,7 @@ class _WeatherAppState extends State<WeatherApp> {
               child: Row(
                 children: [
                   for (int i = 0; i < locationList.length; i++)
-                    if (i == _currentPage)
-                      SliderDot(true)
-                    else
-                      SliderDot(false)
+                    if (i == _currentPage) SliderDot(true) else SliderDot(false)
                 ],
               ),
             ),
