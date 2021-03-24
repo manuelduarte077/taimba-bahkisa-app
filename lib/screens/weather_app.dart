@@ -1,9 +1,15 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:flutter_weather_app/models/weather_locations.dart';
-import 'package:flutter_weather_app/widgets/single_weather.dart';
-import 'package:flutter_weather_app/widgets/slider_dot.dart';
+
+import 'package:transformer_page_view/transformer_page_view.dart';
+
+import '../models/weather_locations.dart';
+import '../widgets/buildin_transform.dart';
+import '../widgets/single_weather.dart';
+import '../widgets/slider_dot.dart';
+
+
 
 class WeatherApp extends StatefulWidget {
   @override
@@ -26,9 +32,9 @@ class _WeatherAppState extends State<WeatherApp> {
       bgImg = 'assets/sunny.jpg';
     } else if (locationList[_currentPage].weatherType == 'Night') {
       bgImg = 'assets/night.jpg';
-    } else if (locationList[_currentPage].weatherType == 'Rain') {
+    } else if (locationList[_currentPage].weatherType == 'Rainy') {
       bgImg = 'assets/rainy.jpg';
-    } else if (locationList[_currentPage].weatherType == 'cloudy') {
+    } else if (locationList[_currentPage].weatherType == 'Cloudy') {
       bgImg = 'assets/cloudy.jpeg';
     }
 
@@ -82,8 +88,10 @@ class _WeatherAppState extends State<WeatherApp> {
                 ],
               ),
             ),
-            PageView.builder(
+            TransformerPageView(
               scrollDirection: Axis.horizontal,
+              transformer: ScaleAndFadeTransformer(),
+              viewportFraction: 0.8,
               onPageChanged: _onPageChanged,
               itemCount: locationList.length,
               itemBuilder: (ctx, i) => SingleWeather(i),
