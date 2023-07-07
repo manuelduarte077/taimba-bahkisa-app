@@ -1,19 +1,22 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_weather_app/screens/weather_app.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(const WeatherApp());
 
-class MyApp extends StatelessWidget {
+class WeatherApp extends StatelessWidget {
+  const WeatherApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
       title: 'Material App',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-        visualDensity: VisualDensity.adaptivePlatformDensity,
+      home: Scaffold(
+        appBar: AppBar(
+          title: const Text('Material App Bar'),
+        ),
+        body: const Center(
+          child: Text('Hello World'),
+        ),
       ),
-      home: WeatherApp(),
     );
   }
 }
