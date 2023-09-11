@@ -1,26 +1,23 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:weather_app/presentation/bloc/weather_bloc.dart';
+import 'package:weather_app/presentation/screens/weather_screen.dart';
+import 'package:weather_app/injection.dart' as di;
 
 class WeatherApp extends StatelessWidget {
   const WeatherApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      theme: ThemeData(
-        useMaterial3: true,
-      ),
-      title: 'Weather App',
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Weather App'),
+    return MultiBlocProvider(
+      providers: [
+        BlocProvider(
+          create: (_) => di.locator<WeatherBloc>(),
         ),
-        body: const Center(
-          child: Text('Hello World'),
-        ),
-        floatingActionButton: FloatingActionButton(
-          onPressed: () {},
-          child: const Icon(Icons.add),
-        ),
+      ],
+      child: MaterialApp(
+        theme: ThemeData(useMaterial3: true),
+        home: const WeatherScreen(),
       ),
     );
   }
