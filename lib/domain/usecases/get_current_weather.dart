@@ -8,7 +8,7 @@ class GetCurrentWeather {
 
   GetCurrentWeather(this.repository);
 
-  Future<Either<Failure, Weather>> call(String cityName) {
+  Future<Either<Failure, Weather>> execute(String cityName) {
     return repository.getCurrentWeather(cityName);
   }
 }
