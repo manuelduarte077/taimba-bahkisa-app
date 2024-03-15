@@ -1,35 +1,51 @@
-name: weather_app
-description: A new Flutter project.
-
+name: weather
+description: "Taimba Nahkisa Weather App"
 publish_to: "none"
-
-version: 1.0.0+1
+version: 1.0.0
 
 environment:
-  sdk: ">=3.0.2 <4.0.0"
-
+  sdk: ">=3.3.0-26.0.dev <4.0.0"
 dependencies:
-  cupertino_icons: ^1.0.2
-  dartz: ^0.10.1
-  equatable: ^2.0.5
   flutter:
     sdk: flutter
+  cupertino_icons: ^1.0.2
+
+  # Logics
   flutter_bloc: ^8.1.3
-  flutter_dotenv: ^5.1.0
-  get_it: ^7.6.0
   http: ^1.1.0
-  rxdart: ^0.27.7
+  geolocator: ^10.1.0
+  connectivity_plus: ^5.0.1
+  equatable: ^2.0.5
+  intl: ^0.18.1
+  home_widget: ^0.3.0
+
+  #UI
+  animate_do: ^3.1.2
+  dismissible_page: ^1.0.2
+  google_fonts: ^6.1.0
+  flutter_screenutil: ^5.9.0
+  flutter_svg: ^2.0.7
+  shimmer_animation: ^2.1.0+1
+  awesome_notifications: ^0.8.2
+  lottie: ^2.7.0
 
 dev_dependencies:
-  build_runner: ^2.4.6
-  flutter_lints: ^2.0.0
   flutter_test:
     sdk: flutter
-  mockito: ^5.4.2
-  mocktail: ^0.3.0
+  flutter_lints: ^2.0.0
+  flutter_launcher_icons: ^0.13.1
+
+flutter_launcher_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/icons/logo-square.png"
 
 flutter:
   uses-material-design: true
 
   assets:
-    - .env
+    - assets/icons/
+    - assets/images/
+    - assets/weather_icons/day/
+    - assets/weather_icons/night/
+    - assets/lottie/
