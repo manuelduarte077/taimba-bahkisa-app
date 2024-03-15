@@ -19,6 +19,7 @@ class BottomSheetWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     String getTodayDay = DateFormat.MMMMd().format(DateTime.now());
+
     return ClipRRect(
       borderRadius: BorderRadius.only(
         topLeft: Radius.circular(40.r),

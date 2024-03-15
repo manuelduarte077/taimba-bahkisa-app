@@ -107,8 +107,8 @@ class _CitiesListSelectorState extends State<CitiesListSelector> {
                                           onTap: () {
                                             widget.weatherBloc.add(
                                               FetchWeatherByCity(
-                                                  _filterController.text
-                                                      .trim()),
+                                                _filterController.text.trim(),
+                                              ),
                                             );
                                             Navigator.of(context).pop();
                                           },
