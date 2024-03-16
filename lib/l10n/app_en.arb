@@ -1,0 +1,72 @@
+{
+    "today": "Today",
+    "tomorrow": "Tomorrow",
+    "forecast": "Forecast",
+    "snow": "Snow",
+    "unitSystem": "Unit System",
+    "systemLanguage": "System Language",
+    "theme": "Theme",
+    "systemTheme": "System Theme",
+    "lightTheme": "Light Theme",
+    "darkTheme": "Dark Theme",
+    "settings": "Settings",
+    "language": "Language",
+    "celsius": "Celsius",
+    "fahrenheit": "Fahrenheit",
+    "defaultErrorMessage": "Something went wrong. Please try again later.",
+    "retry": "Retry",
+    "windSpeed": "Wind Speed",
+    "metric": "Metric",
+    "imperial": "Imperial",
+    "rainChance": "Rain Chance",
+    "max": "Max",
+    "min": "Min",
+    "hourlyForecast": "Hourly Forecast",
+    "sunrise": "Sunrise",
+    "sunset": "Sunset",
+    "percent": "{value}%",
+    "@percent": {
+        "placeholders": {
+            "value": {
+                "type": "double"
+            }
+        }
+    },
+    "uvIndex": "UV Index",
+    "pressure": "Pressure",
+    "speedUnit": "{value} {unit, select, metric{Kph} imperial{Mph} other{Kph}}",
+    "@speedUnit": {
+        "placeholders": {
+            "value": {
+                "type": "double"
+            },
+            "unit": {
+                "type": "String"
+            }
+        }
+    },
+    "gust": "Gust",
+    "visibility": "Visibility",
+    "pressureUnit": "{value} {unit, select, metric{Mb} imperial{In} other{Mb}}",
+    "@pressureUnit": {
+        "placeholders": {
+            "value": {
+                "type": "double"
+            },
+            "unit": {
+                "type": "String"
+            }
+        }
+    },
+    "temperatureUnit": "{value}{unit, select, metric{C} imperial{F} other{C}}°",
+    "@temperatureUnit": {
+        "placeholders": {
+            "value": {
+                "type": "double"
+            },
+            "unit": {
+                "type": "String"
+            }
+        }
+    }
+}
