@@ -1,8 +1,8 @@
 import 'package:weather_app/common_lib.dart';
-import 'package:weather_app/src/main/forecast_provider.dart';
-import 'package:weather_app/src/main/today_weather/today_weather_page.dart';
-import 'package:weather_app/src/widgets/default_error_widget.dart';
-import 'package:weather_app/src/widgets/default_loading_widget.dart';
+import 'package:weather_app/features/main/forecast_provider.dart';
+import 'package:weather_app/features/main/today_weather/today_weather_page.dart';
+import 'package:weather_app/features/widgets/default_error_widget.dart';
+import 'package:weather_app/features/widgets/default_loading_widget.dart';
 
 @RoutePage()
 class TomorrowWeatherPage extends HookConsumerWidget {

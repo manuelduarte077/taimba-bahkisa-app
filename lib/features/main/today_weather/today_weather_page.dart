@@ -4,11 +4,11 @@ import 'package:weather_app/data/service/models/forecast.dart';
 import 'package:weather_app/data/service/models/temperature_unit.dart';
 import 'package:weather_app/date_time.dart';
 import 'package:weather_app/l10n/localization.dart';
-import 'package:weather_app/src/main/forecast_provider.dart';
-import 'package:weather_app/src/settings/settings_provider.dart';
-import 'package:weather_app/src/widgets/data_list_tile.dart';
-import 'package:weather_app/src/widgets/default_error_widget.dart';
-import 'package:weather_app/src/widgets/default_loading_widget.dart';
+import 'package:weather_app/features/main/forecast_provider.dart';
+import 'package:weather_app/features/settings/settings_provider.dart';
+import 'package:weather_app/features/widgets/data_list_tile.dart';
+import 'package:weather_app/features/widgets/default_error_widget.dart';
+import 'package:weather_app/features/widgets/default_loading_widget.dart';
 import 'package:weather_app/theme.dart';
 
 @RoutePage()

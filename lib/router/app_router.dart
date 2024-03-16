@@ -1,9 +1,9 @@
 import 'package:auto_route/auto_route.dart';
-import 'package:weather_app/src/main/forecast_weather/forecast_weather_page.dart';
-import 'package:weather_app/src/main/main_page.dart';
-import 'package:weather_app/src/main/today_weather/today_weather_page.dart';
-import 'package:weather_app/src/main/tomorrow_weather/tomorrow_weather_page.dart';
-import 'package:weather_app/src/settings/settings_page.dart';
+import 'package:weather_app/features/main/forecast_weather/forecast_weather_page.dart';
+import 'package:weather_app/features/main/main_page.dart';
+import 'package:weather_app/features/main/today_weather/today_weather_page.dart';
+import 'package:weather_app/features/main/tomorrow_weather/tomorrow_weather_page.dart';
+import 'package:weather_app/features/settings/settings_page.dart';
 
 part 'app_router.gr.dart';
 

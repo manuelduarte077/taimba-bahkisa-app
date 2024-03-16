@@ -1,6 +1,6 @@
 import 'package:weather_app/common_lib.dart';
 import 'package:weather_app/data/service/models/temperature_unit.dart';
-import 'package:weather_app/src/settings/settings_provider.dart';
+import 'package:weather_app/features/settings/settings_provider.dart';
 import 'package:weather_app/theme.dart';
 
 /// Using record as typedef is better than using class

@@ -1,9 +1,9 @@
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:weather_app/common_lib.dart';
 import 'package:weather_app/router/app_router.dart';
-import 'package:weather_app/src/main/sliver_header.dart';
-import 'package:weather_app/src/main/forecast_provider.dart';
-import 'package:weather_app/src/widgets/flex_padded.dart';
+import 'package:weather_app/features/main/sliver_header.dart';
+import 'package:weather_app/features/main/forecast_provider.dart';
+import 'package:weather_app/features/widgets/flex_padded.dart';
 import 'package:weather_app/theme.dart';
 
 typedef TabRoute = ({

@@ -2,7 +2,7 @@ import 'package:flutter/services.dart';
 import 'package:weather_app/common_lib.dart';
 import 'package:weather_app/gen/assets.gen.dart';
 import 'package:weather_app/router/app_router.dart';
-import 'package:weather_app/src/settings/settings_provider.dart';
+import 'package:weather_app/features/settings/settings_provider.dart';
 
 import 'theme.dart';
 
